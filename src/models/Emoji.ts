@@ -1,13 +1,17 @@
-export default interface IEmoji {
+export interface IEmoji {
   data: string;
   category: string;
   aliases: string[];
 }
 
-export default class Emoji implements IEmoji {
+export class Emoji implements IEmoji {
   constructor(
     public data: string,
     public category: string,
     public aliases: string[]
-  ) { }
+  ) {
+    this.data = '';
+    this.category = '';
+    this.aliases = [];
+   }
 }
